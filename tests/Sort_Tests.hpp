@@ -1,9 +1,9 @@
 #ifndef __SORT_TESTS_HPP__
 #define __SORT_TESTS_HPP__
 #include "gtest/gtest.h"
-#include "../VectorContainer.hpp"
-#include "../list_container.hpp"
-#include "../bubble_sort.hpp"
+#include "../containers/VectorContainer.hpp"
+#include "../containers/list_container.hpp"
+#include "../sorts/bubble_sort.hpp"
 
 TEST(SortTestSet, SelectionSortTest) {
     Op* seven = new Op(7);

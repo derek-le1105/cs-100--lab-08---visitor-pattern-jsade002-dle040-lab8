@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "gtest/gtest.h"
-#include "../VectorContainer.hpp"
+#include "../containers/VectorContainer.hpp"
 
 TEST(VectorContainerTestSet, AddElementTest) {
     Op* seven = new Op(7);
