@@ -16,6 +16,17 @@ class Op : public Base {
 	    opString = std::to_string(inputValue);
 	    return opString;
 	}
+	virtual Iterator* create_iterator(){
+        
+    }
+
+	virtual Base* get_left(){
+
+    }
+
+    virtual Base* get_right(){
+        
+    }
 };
 
 #endif //__OP_HPP__

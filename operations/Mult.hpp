@@ -23,6 +23,18 @@ public:
         multString = "(" + lhsString + " * " + rhsString + ")";
         return multString;
     }
+
+    virtual Iterator* create_iterator(){
+        
+    }
+    
+    virtual Base* get_left(){
+
+    }
+
+    virtual Base* get_right(){
+        
+    }
 };
 
 

@@ -23,6 +23,18 @@ public:
         return addString;
     }
 
+    virtual Iterator* create_iterator(){
+
+    }
+
+    virtual Base* get_left(){
+
+    }
+
+    virtual Base* get_right(){
+        
+    }
+
 };
 
 #endif //__ADD_HPP__

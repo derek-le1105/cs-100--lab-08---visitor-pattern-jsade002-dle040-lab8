@@ -31,6 +31,17 @@ class Pow : public Base
 	    finalString = "(" + lString + " ** " + rString + ")";
 	    return finalString;
 	}
+	virtual Iterator* create_iterator(){
+        
+    }
+
+	virtual Base* get_left(){
+
+    }
+
+    virtual Base* get_right(){
+        
+    }
 
 };
 
