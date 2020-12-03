@@ -36,8 +36,7 @@ public:
 
     virtual Base* get_right(){
         return right;
-    }}
-
+    }
 };
 
 #endif //__SUB_HPP__

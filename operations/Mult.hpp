@@ -38,7 +38,7 @@ public:
 
     virtual Base* get_right(){
         return right;
-    }}
+    }
 };
 
 
