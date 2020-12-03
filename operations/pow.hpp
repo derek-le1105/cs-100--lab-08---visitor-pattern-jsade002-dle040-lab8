@@ -7,19 +7,22 @@
 
 class Pow : public Base
 {
-    protected:
+protected:
 	double base, exponent, answer;
 	std::string lString, rString, finalString;
-    public:
+	Base* left;
+	Base* right;
+public:
 	Pow(Base* lh, Base* rh)
 	{
+		left = lh; 
+		right = rh;
 	    base = lh->evaluate();
 	    exponent = rh->evaluate();
 	    lString = lh->stringify();
 	    rString = rh->stringify();
 	}
 	    
-
 	virtual double evaluate()
 	{
 	    answer = pow(base, exponent);
@@ -32,15 +35,16 @@ class Pow : public Base
 	    return finalString;
 	}
 	virtual Iterator* create_iterator(){
-        
+        Iterator* test = new BinaryIterator(this);
+		return test;
     }
 
 	virtual Base* get_left(){
-
+		return left;
     }
 
     virtual Base* get_right(){
-        
+        return right;
     }
 
 };

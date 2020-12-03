@@ -17,15 +17,16 @@ class Op : public Base {
 	    return opString;
 	}
 	virtual Iterator* create_iterator(){
-        
+        Iterator* test = new NullIterator(this);
+        return test;
     }
 
 	virtual Base* get_left(){
-
+        return nullptr;
     }
 
     virtual Base* get_right(){
-        
+        return nullptr;
     }
 };
 
