@@ -6,10 +6,13 @@
 
 class Sub: public Base{
 protected:
+    Base* left; 
+    Base* right;
     double lhs, rhs, minusAnswer;
     std::string lhsString, rhsString, minusString;
 public:
     Sub(Base* lhsOp, Base* rhsOp){
+        left = lhsOp; right = rhsOp;
         lhs = lhsOp->evaluate(); rhs = rhsOp->evaluate();
         lhsString = lhsOp->stringify(); rhsString = rhsOp->stringify();
     }
@@ -23,16 +26,17 @@ public:
         return minusString;
     }
     virtual Iterator* create_iterator(){
-        
+        Iterator* test = new BinaryIterator(this);
+        return test;
     }
 
     virtual Base* get_left(){
-
+        return left;
     }
 
     virtual Base* get_right(){
-        
-    }
+        return right;
+    }}
 
 };
 
