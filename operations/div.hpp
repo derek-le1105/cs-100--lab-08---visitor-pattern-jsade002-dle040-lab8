@@ -3,6 +3,7 @@
 
 #include "../base.hpp"
 #include "op.hpp"
+#include "../visitor.hpp"
 
 class Div: public Base
 {
@@ -45,7 +46,10 @@ class Div: public Base
 		virtual Base* get_right(){
 			return right;
 		}
-
+		
+		void accept(CountVisitor* v){
+			v->div_count();
+		}
 };
 #endif
 

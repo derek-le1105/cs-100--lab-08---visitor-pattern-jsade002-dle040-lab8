@@ -14,6 +14,7 @@
 */
 #include "tests/factory_tests.hpp"
 #include "tests/iterator_test.hpp"
+#include "tests/visitor_tests.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

@@ -11,12 +11,13 @@ ADD_EXECUTABLE(test
     sorts/SelectionSort.cpp
     sorts/bubble_sort.cpp
     binary_iterator.cpp
+    visitor.cpp
 )
 
-ADD_EXECUTABLE(calculator
-    main.cpp
-    binary_iterator.cpp
-)
+#ADD_EXECUTABLE(calculator
+#   main.cpp
+#   binary_iterator.cpp
+#)
 
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)

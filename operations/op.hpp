@@ -2,6 +2,7 @@
 #define __OP_HPP__
 
 #include "../base.hpp"
+#include "../visitor.hpp"
 
 class Op : public Base {
     protected:
@@ -27,6 +28,10 @@ class Op : public Base {
 
     virtual Base* get_right(){
         return nullptr;
+    }
+
+    void accept(CountVisitor* v){
+	v->visit_op();
     }
 };
 
