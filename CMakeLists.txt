@@ -10,11 +10,12 @@ ADD_EXECUTABLE(test
     containers/VectorContainer.cpp
     sorts/SelectionSort.cpp
     sorts/bubble_sort.cpp
-
+    binary_iterator.cpp
 )
 
 ADD_EXECUTABLE(calculator
     main.cpp
+    binary_iterator.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

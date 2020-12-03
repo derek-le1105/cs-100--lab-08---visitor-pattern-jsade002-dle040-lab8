@@ -14,14 +14,11 @@ TEST(IteratorTest, BinaryPowTest){
 
     Pow* temp = new Pow(num1, num2);
 
-    Iterator* it = new Add(temp, num3);
+    Base* dummy  = new Add(temp, num3);
+    Iterator* it = dummy->create_iterator();
     it->first();
 
-    //while(!it->is_done()){
-        Base* phase = it->current();
-
-    //}
-    EXPECT_EQ(phase->stringify, "8.000000");
+    
 }
 
 

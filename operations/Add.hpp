@@ -28,7 +28,7 @@ public:
 
     virtual Iterator* create_iterator(){
         Iterator* test = new BinaryIterator(this);
-        return this;
+        return test;
     }
 
     virtual Base* get_left(){
