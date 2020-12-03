@@ -4,6 +4,7 @@
 #include "../base.hpp"
 #include "op.hpp"
 #include <cstdlib>
+#include "../visitor.hpp"
 
 class Rand : public Base
 {
@@ -19,6 +20,11 @@ class Rand : public Base
 		{
 			randString = std::to_string(value);
 			return randString;
+		}
+		
+		void accept(CountVisitor* v)
+		{
+			v->visit_rand();
 		}
 };
 

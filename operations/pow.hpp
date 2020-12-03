@@ -4,6 +4,7 @@
 #include "../base.hpp"
 #include "op.hpp"
 #include <cmath>
+#include "../visitor.hpp"
 
 class Pow : public Base
 {
@@ -47,6 +48,9 @@ public:
         return right;
     }
 
+    void accept(CountVisitor* v){
+	v->visit_pow();
+    }
 };
 
 #endif

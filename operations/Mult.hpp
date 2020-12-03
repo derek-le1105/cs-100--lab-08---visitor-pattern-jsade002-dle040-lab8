@@ -3,7 +3,7 @@
 
 #include "../base.hpp"
 #include "op.hpp"
-
+#include "../visitor.hpp"
 
 class Mult: public Base{
 protected:
@@ -39,6 +39,11 @@ public:
     virtual Base* get_right(){
         return right;
     }
+    
+    void accept(CountVisitor* v){
+	v->visit_mult();
+    }
+
 };
 
 
